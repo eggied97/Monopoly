@@ -1,0 +1,65 @@
+<?xml version="1.0" ?> 
+<project name="Monopoly ANW">
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties"/>	
+	<property file="build.properties" />
+	
+	<target name="clear">
+		<delete dir="C:/Users/Levi van Rheenen/Desktop/monopoly/build" />
+		<mkdir dir="C:/Users/Levi van Rheenen/Desktop/monopoly/build" />
+	</target>
+	
+	<target name="create_base_jar">
+		<jar 
+			destfile="C:/Users/Levi van Rheenen/Desktop/monopoly/build/Monopoly.jar" 
+			basedir="C:/Users/Levi van Rheenen/Eclipse projects/mono/Monopoly/bin" >	
+			<manifest>
+				<attribute name="Class-Path" value="lib/jinput.jar lib/lwjgl.jar lib/lwjgl_util.jar" />
+				<attribute name="Main-Class" value="Start" />
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="set_apis">
+		<copy 
+			file="C:/Users/Levi van Rheenen/Eclipse projects/mono/APIs/jinput.jar" 
+			tofile="C:/Users/Levi van Rheenen/Desktop/monopoly/build/lib/jinput.jar" />
+		<copy 
+			file="C:/Users/Levi van Rheenen/Eclipse projects/mono/APIs/lwjgl.jar" 
+			tofile="C:/Users/Levi van Rheenen/Desktop/monopoly/build/lib/lwjgl.jar" />
+		<copy 
+			file="C:/Users/Levi van Rheenen/Eclipse projects/mono/APIs/lwjgl_util.jar" 
+			tofile="C:/Users/Levi van Rheenen/Desktop/monopoly/build/lib/lwjgl_util.jar" />
+		<copy todir="C:/Users/Levi van Rheenen/Desktop/monopoly/build/lib/natives" >
+			<fileset dir="C:/Users/Levi van Rheenen/Eclipse projects/mono/APIs/natives_eclipse" />
+		</copy>
+	</target>
+	
+	<target name="startfile">
+		<touch file="C:/Users/Levi van Rheenen/Desktop/monopoly/build/start.bat" />
+		<echo file="C:/Users/Levi van Rheenen/Desktop/monopoly/build/start.bat">
+java -jar lib/lib.jar
+		</echo>
+	</target>
+	
+	<target name="set_lib">
+		<copy
+			file="C:/Users/Levi van Rheenen/Eclipse projects/mono/lib/lib.jar"
+			tofile="C:/Users/Levi van Rheenen/Desktop/monopoly/build/lib/lib.jar" />
+	</target>
+	
+	<target name="wait">
+		<java jar="C:/wait_lib/wait.jar" fork="true">
+			<arg value="1000" />
+		</java>
+	</target>
+	
+	<target name="build" >
+			<antcall target="wait" />
+		<antcall target="clear" />
+		<antcall target="create_base_jar" />
+		<antcall target="set_apis" />
+		<antcall target="set_lib" />
+		<antcall target="startfile" />
+		<antcall target="wait" />
+	</target>
+</project>

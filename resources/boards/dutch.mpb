@@ -1,0 +1,32 @@
+board.colors:
+{
+	purple="Ons Dorp"
+	light_blue="Arnhem"
+	pink="Haarlem"
+	orange="Utrecht"
+	red="Groningen"
+	yellow="'S Gravenhage"
+	green="Rotterdam"
+	dark_blue="Amserdam"
+}
+
+board.names:
+{
+	purple=["Dorpsstraat", "Brink"]
+	light_blue=["Steenstraat", "Ketelstraat", "Velperplein"]
+	pink=["Barteljoris<s>straat", "Zijlweg", "Houtweg"]
+	orange=["Neude", "Biltstraat", "Vreeburg"]
+	red=["A-Kerkhof", "Groote Markt", "Heerestraat"]
+	yellow=["Spui", "Plein", "Lange Poten"]
+	green=["Hofplein", "Blaak", "Coolsingel"]
+	dark_blue=["Leidsche<s>straat", "Kalverstraat"]
+	stations=["Station Zuid", "Station West", "Station Noord", "Station Oost"]
+	utilities=["Elektriciteits<s>bedrijf", "Water<s>leiding"]
+}
+
+name="Nederlands"
+currency="$"
+multiplier=1
+double_if_on_go=true
+free_parking_money=true
+money=[5, 5, 5, 6, 2, 4, 2]

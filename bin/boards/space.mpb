@@ -1,0 +1,35 @@
+## <s> --> mogelijk split
+## <n> --> spatie zonder split
+
+board.colors:
+{
+	purple="Transneptunische objectmanen"
+	light_blue="Planetoïde<s>manen"
+	pink="Aardse Planeten"
+	orange="Gasplaneten"
+	red="Rode Reuzen"
+	yellow="Sterren"
+	green="Lichte Zwarte<n>Gaten"
+	dark_blue="Zware Zwarte<n>Gaten"
+}
+
+board.names:
+{
+	purple=["Eris", "Pluto"]
+	light_blue=["Europa", "Triton", "De Maan"]
+	pink=["Venus", "Mars", "Aarde"]
+	orange=["Neptunus", "Saturnus", "Jupiter"]
+	red=["Sagittarii", "Granaatster", "Betelgeuze"]
+	yellow=["Poolster", "Sirius", "De Zon"]
+	green=["Cygni", "Cygnus", "HLX-1"]
+	dark_blue=["Sagittarius A", "NGC1277"]
+	stations=["Ruimtestation Saljoet", "Ruimtestation Skylab", "Ruimtestation Tiangong<n>1", "Ruimtestation ISS"]
+	utilities=["Brandstof Bijtanken", "Zuurstof Bijvullen"]
+}
+
+name="ANW project"
+currency="€"
+multiplier=100000
+double_if_on_go=true
+free_parking_money=true
+money=[5, 5, 5, 6, 2, 4, 2]
